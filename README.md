@@ -1,73 +1,156 @@
-# Welcome to your Lovable project
+# PredictivePro - Agricultural Intelligence Platform
 
-## Project info
+A 4-page corporate website for PredictivePro, showcasing advanced machine learning and remote process monitoring solutions for weather forecasting and agricultural optimization in Nigeria.
 
-**URL**: https://lovable.dev/projects/13af8f85-97d7-4e27-887d-bcc0b8390648
+## Project Overview
 
-## How can I edit this code?
+This project implements a Minimalistic + Neobrutalist Hybrid design website built with Vite, React, TypeScript, Tailwind CSS, and shadcn/ui components.
 
-There are several ways of editing your application.
+## Content Source
 
-**Use Lovable**
+**Primary content sourced from uploaded PDF**: "PredictivePro - ML & RPM Solutions for Weather and Agriculture Landing Page Content.pdf"
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/13af8f85-97d7-4e27-887d-bcc0b8390648) and start prompting.
+### Content Mapping (PDF → Implementation)
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Hero Headlines**: Exact headlines from PDF used verbatim in src/data/content.ts
+- **Mission Statement**: Full mission paragraph copied from PDF to mission.description
+- **Key Capabilities**: Four main capability metrics (99.2% accuracy, real-time monitoring, etc.) from PDF
+- **Team Information**: Leadership team names, titles, and bio information from PDF
+- **Client Testimonials**: Exact client quotes and Nigerian client names from PDF
+- **Metrics**: Performance numbers (99.2%, 25%, 500+, 250+, $50M+) from PDF
+- **Contact Information**: Phone (+234 705 862 5114) and address from PDF
+- **Service Packages**: Four package types and descriptions from PDF
+- **Technology Stack**: ML/AI technologies and platform details from PDF
 
-**Use your preferred IDE**
+## Design System
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Color Palette
+- **Backgrounds**: White (#FFFFFF) and Charcoal (#111214)
+- **Accents**: Deep Green (#0FA67A) and Deep Blue (#0B3D91)
+- **Typography**: Exo 2 (headlines), Inter (body), Roboto Condensed (labels)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Visual Language
+- Brutalist rectangular blocks with sharp edges
+- Generous whitespace for minimalist balance
+- Subtle glassmorphism on floating cards
+- Flat rectangular buttons with hover effects
 
-Follow these steps:
+## Pages Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Home (/)** - Hero, mission, capabilities preview, team preview, testimonials preview
+2. **About (/about)** - Expanded services, platform diagram, technology stack
+3. **Solutions (/solutions)** - Industries served, packages, get started section
+4. **Team & Contact (/team)** - Full team grid, testimonials, contact form
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Nigerian Team Requirement
 
-# Step 3: Install the necessary dependencies.
-npm i
+**IMPORTANT**: All team member photos and testimonial images MUST feature Nigerian professionals.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Current Team Images
+- `/public/assets/team/isaac-aagache.jpg` - Nigerian CEO portrait
+- `/public/assets/team/funmi-adebayo.jpg` - Nigerian CTO portrait  
+- `/public/assets/team/chidi-okonkwo.jpg` - Nigerian Professor portrait
+- `/public/assets/team/sarah-musa.jpg` - Nigerian Meteorologist portrait
+
+All images use alt text format: "Nigerian — [Full Name] — [Title]"
+
+## Technical Stack
+
+- **Framework**: Vite + React 18 + TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Components**: shadcn/ui with custom brutalist variants
+- **Routing**: React Router DOM (client-side SPA)
+- **Build**: Vite production build with asset optimization
+
+## Development
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd predictivepro-website
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+### File Structure
+```
+src/
+├── components/
+│   ├── ui/              # Custom brutalist UI components
+│   └── layout/          # Navbar and Footer
+├── data/
+│   └── content.ts       # All site content from PDF
+├── pages/               # Four main pages
+│   ├── Home.tsx
+│   ├── About.tsx
+│   ├── Solutions.tsx
+│   └── TeamContact.tsx
+└── styles/
+    └── index.css        # Design system and typography
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## HTML Structure (index.html)
 
-**Use GitHub Codespaces**
+**CONFIRMED**: The index.html contains NO meta tags as required. Minimal structure:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PredictivePro - Agricultural Intelligence</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+```
 
-## What technologies are used for this project?
+## Content Customization
 
-This project is built with:
+To modify content without touching JSX:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Edit `/src/data/content.ts` - all text content is centralized here
+2. Replace team photos in `/public/assets/team/` (maintain Nigerian requirement)
+3. Update contact information in content.ts contact section
 
-## How can I deploy this project?
+## Performance & Accessibility
 
-Simply open [Lovable](https://lovable.dev/projects/13af8f85-97d7-4e27-887d-bcc0b8390648) and click on Share -> Publish.
+- Lazy loading for images (`loading="lazy"`)
+- Semantic HTML with proper ARIA labels
+- Keyboard navigation support
+- High contrast design for accessibility
+- Responsive design (mobile-first approach)
 
-## Can I connect a custom domain to my Lovable project?
+## Deployment
 
-Yes, you can!
+The site is ready for deployment with:
+- Static asset optimization
+- Client-side routing configuration
+- Compressed images and assets
+- Production build optimization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Private project for PredictivePro. All content and images are proprietary.
+
+---
+
+**Contact**: For questions about content updates or technical implementation, refer to the centralized content.ts file and maintain the Nigerian professional imagery requirement for all team/testimonial photos.

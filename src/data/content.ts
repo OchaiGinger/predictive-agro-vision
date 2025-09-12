@@ -162,6 +162,7 @@ export const siteContent = {
   // Contact Information
   contact: {
     phone: "+234 705 862 5114",
+    email: "info@predictivepro.tech",
     address: "PredictivePro - Predictive Analytics Solutions, 1 St Luis Anthon Street, Ojo, Lagos State, Nigeria",
     tagline: "PredictivePro — Predicting Success. Harvesting Excellence."
   },

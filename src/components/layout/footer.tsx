@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { siteContent } from "@/data/content"
+import logo from "@/assets/logo.png"
 
 export const Footer = () => {
   return (
@@ -8,8 +9,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="font-headline text-xl font-bold text-deep-green">
-              PREDICTIVEPRO
+            <div className="flex items-center space-x-3">
+              <img 
+                src={logo} 
+                alt="PredictivePro Logo" 
+                className="h-8 w-auto"
+              />
+              <div className="font-headline text-xl font-bold text-deep-green">
+                PREDICTIVEPRO
+              </div>
             </div>
             <p className="font-body text-sm text-charcoal-foreground/80">
               {siteContent.contact.tagline}
@@ -69,6 +77,10 @@ export const Footer = () => {
               Contact
             </h3>
             <div className="space-y-2">
+              <div className="font-body text-sm text-charcoal-foreground/80">
+                <div className="font-semibold">Email:</div>
+                <div>{siteContent.contact.email}</div>
+              </div>
               <div className="font-body text-sm text-charcoal-foreground/80">
                 <div className="font-semibold">Phone:</div>
                 <div>{siteContent.contact.phone}</div>

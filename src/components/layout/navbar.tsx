@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom"
 import { Menu, X } from "lucide-react"
 import { BrutalistButton } from "@/components/ui/brutalist-button"
 import { cn } from "@/lib/utils"
+import logo from "@/assets/logo.png"
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,7 +23,12 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src={logo} 
+              alt="PredictivePro Logo" 
+              className="h-8 lg:h-10 w-auto"
+            />
             <div className="font-headline text-xl lg:text-2xl font-bold text-deep-green">
               PREDICTIVEPRO
             </div>

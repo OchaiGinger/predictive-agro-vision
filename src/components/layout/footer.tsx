@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { siteContent } from "@/data/content"
-import logo from "@/assets/logo.png"
 
 export const Footer = () => {
   return (
@@ -11,7 +10,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src={logo} 
+                src="proActive.png"
                 alt="PredictivePro Logo" 
                 className="h-8 w-auto"
               />

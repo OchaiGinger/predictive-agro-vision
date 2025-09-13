@@ -24,7 +24,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="proActive.png"
+              src="proActive_.png"
               alt="PredictivePro Logo" 
               className="h-8 lg:h-10 w-auto"
             />

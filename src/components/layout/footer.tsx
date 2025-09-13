@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="proActive.png"
+                src="proActive_.png"
                 alt="PredictivePro Logo" 
                 className="h-8 w-auto"
               />
